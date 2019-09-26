@@ -24,6 +24,11 @@ html {
 }
 
 .add {
+  color: lightcoral;
+  border-radius: 5%;
+  border-color: black;
+  background-color: white;
+  text-align: center;
 }
 
 .container {
@@ -36,13 +41,38 @@ html {
   align-items: center;
   justify-content: center;
 }
+.color-display-whole{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .color-box {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  max-width: 250px;
+  align-self: auto;
+  max-width: 170px;
+  height: 15px;
   border: solid black 5px;
   border-radius: 30px;
-  padding: 50px;
+  padding: 20px;
   margin: 1rem;
+}
+
+.color-display-individual{
+  display: flex;
+  flex-direction: row;
+  align-self: auto;
+  max-width: 170px;
+}
+
+.hr {
+  padding: 0.1% 0.1% 0.1% 0.1%;
+  background-color: lightcoral;
+}
+.pallete {
+  margin: 0% 0% 2% 0%;
 }
