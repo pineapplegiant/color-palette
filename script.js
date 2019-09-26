@@ -1,14 +1,18 @@
 const colorPickerContainer = document.getElementsByClassName("container");
 
 function listen() {
-  document.querySelector(".add").addEventListener("click", function(event) {
-    addNewColorPickerAndDisplaycolumn();
-  });
+  document
+    .querySelector(".add-new-color")
+    .addEventListener("click", function(event) {
+      addNewColorPicker();
+    });
+  document
+    .querySelector(".delete-button")
+    .addEventListener("click", function(event) {
+      deleteColorPicker();
+    });
 }
 
-function addNewColorPickerAndDisplaycolumn() {
-  addNewColorPicker();
-}
 function addNewColorPicker() {
   let h2 = document.createElement("h2");
 
@@ -17,6 +21,7 @@ function addNewColorPicker() {
 
   let colorBox = document.createElement("div");
   colorBox.className = "color-box";
+  colorBox.id = colorNumber; // to use when listening to color changes in picker to display in pallete
 
   let firstInput = document.createElement("input");
   firstInput.type = "color";
@@ -29,6 +34,7 @@ function addNewColorPicker() {
   secondInput.name = "";
 
   let deleteButton = document.createElement("button");
+  deleteButton.className = "delete-button";
   deleteButton.innerText = "delete";
 
   colorBox.appendChild(h2);
