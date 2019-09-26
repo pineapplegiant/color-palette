@@ -1,19 +1,18 @@
 const colorPickerContainer = document.getElementsByClassName("container");
 const colorPalleteContainer = document.getElementsByClassName("pallete");
+const theWholePage = document.getElementsByClassName("whole-page");
 
-function listenForAddColorPicker() {
+function listen() {
   document
-    .querySelector(".add-new-color")
+    .querySelector(".whole-page")
     .addEventListener("click", function(event) {
-      addNewColorPicker();
-    });
-}
-
-function listenForDeleteColorPicker() {
-  document
-    .querySelector(".delete-button")
-    .addEventListener("click", function(event) {
-      deleteColorPicker();
+      if (event.target.tagName === "BUTTON") {
+        if (event.target.innerText === "Add New Color") {
+          addNewColorPicker();
+        } else if (event.target.innerText === "Delete") {
+          deleteColorPicker(event.target.id);
+        }
+      }
     });
 }
 
@@ -39,7 +38,8 @@ function addNewColorPicker() {
 
   let deleteButton = document.createElement("button");
   deleteButton.className = "delete-button";
-  deleteButton.innerText = "delete";
+  deleteButton.innerText = "Delete";
+  deleteButton.id = colorNumber;
 
   colorBox.appendChild(h2);
   colorBox.appendChild(firstInput);
@@ -53,7 +53,7 @@ function addNewColorPicker() {
 
 function howManyColors() {
   let numberOfColorBoxes = document.getElementsByClassName("color-box").length;
-  return numberOfColorBoxes + 1; // js arrays start at 0 ^_^ and no on cares for color box {0}
+  return numberOfColorBoxes + 1; // js arrays start at 0 ^_^ and no on cares for color {0}
 }
 function addDisplayColumn(colorNumber) {
   let displayColumn = document.createElement("div");
@@ -62,7 +62,14 @@ function addDisplayColumn(colorNumber) {
   colorPalleteContainer[0].appendChild(displayColumn);
 }
 
-function deleteColorPicker() {}
+function deleteColorPicker(idNumber) {
+  let colorPickerToDelete = document.getElementById(idNumber);
+  colorPickerToDelete.remove();
+  let colorColumnToDelete = document.getElementsByClassName("color-column");
+  
+  // if (colorColumnToDelete[0]["id"] === idNumber) {
+  //   colorColumnToDelete.remove();
+  // }
+}
 
-listenForAddColorPicker();
-listenForDeleteColorPicker();
+listen();
