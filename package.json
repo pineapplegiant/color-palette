@@ -1,0 +1,19 @@
+{
+  "name": "color-pallete",
+  "version": "1.0.0",
+  "description": "Built with vanilla JS and pure ❤️",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pineapplegiant/color-pallete.git"
+  },
+  "author": "The pineapplegiant and xeare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pineapplegiant/color-pallete/issues"
+  },
+  "homepage": "https://github.com/pineapplegiant/color-pallete#readme"
+}
