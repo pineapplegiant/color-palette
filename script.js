@@ -20,9 +20,10 @@ function listen() {
 
 function addNewColorPicker() {
   colorNumber = howManyColors();
+  randomId = Math.random() // this is next level right here
   let colorBox = document.createElement("div");
   colorBox.className = "color-box";
-  colorBox.id = colorNumber; // to use when listening to color changes in picker to display in pallete
+  colorBox.id = randomId; // to use when listening to color changes in picker to display in pallete
 
   let h2 = document.createElement("h2");
 
@@ -41,7 +42,7 @@ function addNewColorPicker() {
   let deleteButton = document.createElement("button");
   deleteButton.className = "delete-button";
   deleteButton.innerText = "Delete";
-  deleteButton.id = colorNumber;
+  deleteButton.id = randomId;
 
   colorBox.appendChild(h2);
   colorBox.appendChild(firstInput);
@@ -50,7 +51,7 @@ function addNewColorPicker() {
 
   // page is an iterable for some reason, a node i think, so we gotta iterate over it
   colorPickerContainer[0].appendChild(colorBox);
-  addDisplayColumn(colorNumber); // every color picker needs their color displayed
+  addDisplayColumn(randomId); // every color picker needs their color displayed
 }
 
 function howManyColors() {
