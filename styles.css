@@ -83,9 +83,50 @@ html {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  max-width: 175px;
+  /* max-width: 175px; */
+  min-width: 0.2%;
+  max-width: 8%;
+
   border: solid black 1px;
   border-radius: 30px;
-  padding: 25px;
-  margin: 1rem;
+  padding: 12px;
+  margin: 0.4rem;
+}
+
+.color {
+  width: auto;
+  height: 130px;
+}
+
+.delete-button {
+  height: 31px;
+  border-radius: 0% 0% 35% 35%;
+  color: #0099cc;
+
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: black;
+}
+
+.delete-button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+  -webkit-transition: transform 0.3s ease-out;
+}
+
+.h2 {
+  text-align: center;
+}
+
+button:focus {
+  /* magical */
+  outline: 0;
+}
+button:active {
+  transform: scale(1.2);
+  -webkit-transition: transform 0.01s ease-out;
 }

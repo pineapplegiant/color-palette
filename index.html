@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
       rel="stylesheet"
@@ -16,21 +16,20 @@
     <title>Easy Breezy Color Pallette 🎨</title>
   </head>
   <body>
-    <main class="whole-page">
+    <main class="whole-page" id="whole-page">
       <div class="title">
         <h1 class="title">Color Pallete Creater!</h1>
         <button class="add-new-color">Add New Color</button>
+        <button class="add-new-color">Start Over</button>
       </div>
-      <div class="container">
-          <!-- all the color pickers  -->
-        
+      <div class="container" id="container">
+        <!-- all the color pickers  -->
       </div>
 
-      <hr class="hr" />
+      <br class="br" />
 
-      <div class="pallete">
+      <div class="pallete" id="pallete">
         <!-- all the display color columns -->
-
       </div>
     </main>
     <script src="./script.js"></script>
