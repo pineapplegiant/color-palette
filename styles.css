@@ -68,7 +68,6 @@ html {
   align-items: center;
   justify-content: center;
 }
-
 .color-column {
   display: flex;
   flex-grow: 1;

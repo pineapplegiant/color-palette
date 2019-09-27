@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 const colorPickerContainer = document.getElementsByClassName("container");
 const colorPalleteContainer = document.getElementsByClassName("pallete");
 const theWholePage = document.getElementsByClassName("whole-page");
@@ -8,6 +9,7 @@ function listen() {
     .addEventListener("click", function(event) {
       if (event.target.tagName === "BUTTON") {
         if (event.target.innerText === "Add New Color") {
+          
           addNewColorPicker();
         } else if (event.target.innerText === "Delete") {
           deleteColorPicker(event.target.id);
@@ -63,13 +65,10 @@ function addDisplayColumn(colorNumber) {
 }
 
 function deleteColorPicker(idNumber) {
-  let colorPickerToDelete = document.getElementById(idNumber);
-  colorPickerToDelete.remove();
-  let colorColumnToDelete = document.getElementsByClassName("color-column");
-  
-  // if (colorColumnToDelete[0]["id"] === idNumber) {
-  //   colorColumnToDelete.remove();
-  // }
+  let colorPickerToBeDeleted = document.getElementById(idNumber);
+  colorPickerToBeDeleted.remove();
+  let displayColumnToBeDeleted = document.getElementById(idNumber);
+  displayColumnToBeDeleted.remove();
 }
 
 listen();
