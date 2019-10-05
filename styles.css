@@ -23,26 +23,110 @@ html {
   text-align: center;
 }
 
-.add {
+.add-new-color {
+  color: #0099cc;
+  background: transparent;
+  border: 2px solid #0099cc;
+  border-radius: 30px;
+  padding: 16px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: solid black 2px;
+}
+
+.add-new-color:hover {
+  background-color: black;
+  color: white;
+  -webkit-box-shadow: 6px 5px 24px gray;
+}
+.add-new-color:active {
+  background-color: gray;
 }
 
 .container {
   font-family: "Work Sans", sans-serif;
   width: 100%;
-  max-width: 1000px;
+  max-width: 2000px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
+
+.pallete {
+  /* basically same as .container */
+  font-family: "Work Sans", sans-serif;
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.color-column {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  max-width: inherit;
+  min-width: 0.2%;
+  /* width: auto; */
+  /* height: auto; */
+  min-height: 600px;
+  border: solid black 1px;
+}
 .color-box {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  max-width: 250px;
-  border: solid black 5px;
+  /* max-width: 175px; */
+  min-width: 0.2%;
+  max-width: 8%;
+
+  border: solid black 1px;
   border-radius: 30px;
-  padding: 50px;
-  margin: 1rem;
+  padding: 12px;
+  margin: 0.4rem;
+}
+
+.color {
+  width: auto;
+  height: 130px;
+}
+
+.delete-button {
+  height: 31px;
+  border-radius: 0% 0% 35% 35%;
+  color: #0099cc;
+
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: black;
+}
+
+.delete-button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+  -webkit-transition: transform 0.3s ease-out;
+}
+
+.h2 {
+  text-align: center;
+}
+
+button:focus {
+  /* magical */
+  outline: 0;
+}
+button:active {
+  transform: scale(1.2);
+  -webkit-transition: transform 0.01s ease-out;
 }

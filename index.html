@@ -1,50 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Easy Breezy Color Pallette 🎨</title>
   </head>
   <body>
-    <main>
+    <main class="whole-page" id="whole-page">
       <div class="title">
         <h1 class="title">Color Pallete Creater!</h1>
-        <button class="add" type="submit">Add New Color</button>
+        <button class="add-new-color">Add New Color</button>
+        <button class="add-new-color">Start Over</button>
       </div>
-      <div class="container">
-        <div class="color-box">
-          <h2>Color {1}</h2>
-          <input type="color" class="color" name="y" id="">
-          <input type="tel" name="" id="">
-          <button>delete</button>
-        </div>
-        <div class="color-box">
-          <h2>Color</h2>
-          <input type="color" class="color" name="y" id="">
-          <input type="tel" name="" id="">
-          <button>delete</button>
-        </div>
-        <div class="color-box">
-          <h2 class="color-title">Color</h2>
-          <input type="color" class="color" name="y" id="">
-          <input type="tel" name="" id="">
-          <button>delete</button>
-        </div>
-        <div class="color-box">
-          <h2 class="color-title">Color</h2>
-          <input type="color" class="color" name="y" id="">
-          <input type="tel" name="" id="">
-          <button>delete</button>
-        </div>
+      <div class="container" id="container">
+        <!-- all the color pickers  -->
+      </div>
+
+      <br class="br" />
+
+      <div class="pallete" id="pallete">
+        <!-- all the display color columns -->
       </div>
     </main>
-
+    <script src="./script.js"></script>
   </body>
 </html>
-
-
-<script></script>
