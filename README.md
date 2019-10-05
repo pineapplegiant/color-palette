@@ -1,6 +1,10 @@
 # Vanilla Color Pallette Creator 🎨
 
-Built with vanilla JS and pure ❤️
+> Built with vanilla JS and pure ❤️
+
+![Color-Pallete-Design](./assets/colors.png)
+
+
 
 
 ## Team
