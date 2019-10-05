@@ -20,9 +20,16 @@ html {
 }
 
 .title {
+  display: flex;  
+  justify-content: space-between;
   text-align: center;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+
+}
 .add-new-color {
   color: #0099cc;
   background: transparent;
@@ -86,7 +93,6 @@ html {
   /* max-width: 175px; */
   min-width: 0.2%;
   max-width: 8%;
-
   border: solid black 1px;
   border-radius: 30px;
   padding: 12px;
@@ -100,9 +106,8 @@ html {
 
 .delete-button {
   height: 31px;
-  border-radius: 0% 0% 35% 35%;
+  /* border-radius: 0% 0% 35% 35%; */
   color: #0099cc;
-
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
@@ -114,12 +119,8 @@ html {
 .delete-button:hover {
   background-color: black;
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
   -webkit-transition: transform 0.3s ease-out;
-}
-
-.h2 {
-  text-align: center;
 }
 
 button:focus {
@@ -127,6 +128,7 @@ button:focus {
   outline: 0;
 }
 button:active {
-  transform: scale(1.2);
-  -webkit-transition: transform 0.01s ease-out;
+  color: chocolate;
+  /* transform: scale(1.2); */
+  /* -webkit-transition: transform 0.01s ease-out; */
 }

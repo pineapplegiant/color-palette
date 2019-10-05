@@ -1,0 +1,22 @@
+{
+  "name": "color-pallete",
+  "version": "0.1.0",
+  "description": "Built with vanilla JS and pure ❤️",
+  "main": "index.html",
+  "scripts": {
+    "test": "None"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pineapplegiant/color-pallete.git"
+  },
+  "author": "PineappleGiant and Xeare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pineapplegiant/color-pallete/issues"
+  },
+  "homepage": "https://github.com/pineapplegiant/color-pallete#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1"
+  }
+}
