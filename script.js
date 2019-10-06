@@ -1,10 +1,11 @@
+// Event Listeners
 const colorPalleteContainer = document.getElementsByClassName("pallete");
 const page = document.getElementById("whole-page");
 
 page.addEventListener("click", buttonHandler, false);
 page.addEventListener("change", colorHandler, false);
 
-// TODO: Refactor to listen on buttons not the whole page
+// Handle button clicks
 function buttonHandler(event) {
   if (event.target.tagName === "BUTTON") {
     if (event.target.innerText === "ADD COLOR") {
@@ -17,6 +18,7 @@ function buttonHandler(event) {
   }
 }
 
+// Set color to color input
 function colorHandler(event) {
   if (event.target.className === "color-input") {
     console.log(event.target.id);
@@ -41,8 +43,14 @@ function addDisplayColumn() {
   input.className = "color-input";
   input.id = randomId;
 
-  displayColumn.appendChild(input);
+  let colorName = document.createElement("input");
+  colorName.type = "text";
+  colorName.className = "color-name";
+  input.id = randomId;
+
   displayColumn.appendChild(deleteButton);
+  displayColumn.appendChild(input);
+  displayColumn.appendChild(colorName);
   colorPalleteContainer[0].appendChild(displayColumn);
 }
 
