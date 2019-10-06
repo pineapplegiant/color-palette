@@ -1,4 +1,4 @@
-# Vanilla Color Pallette Creator 🎨
+# Vanilla Color Palette Creator 🎨
 
 > Built with vanilla JS and pure ❤️
 
