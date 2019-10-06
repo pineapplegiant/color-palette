@@ -4,13 +4,14 @@ const page = document.getElementById("whole-page");
 page.addEventListener("click", buttonHandler, false);
 page.addEventListener("change", colorHandler, false);
 
+// TODO: Refactor to listen on buttons not the whole page
 function buttonHandler(event) {
   if (event.target.tagName === "BUTTON") {
-    if (event.target.innerText === "+") {
+    if (event.target.innerText === "ADD COLOR") {
       addDisplayColumn();
     } else if (event.target.innerText === "x") {
       deleteColorPicker(event.target.id);
-    } else if (event.target.innerText === "C") {
+    } else if (event.target.innerText === "START OVER") {
       startOver();
     }
   }
@@ -19,7 +20,7 @@ function buttonHandler(event) {
 function colorHandler(event) {
   if (event.target.className === "color-input") {
     console.log(event.target.id);
-    
+
     fillInColor(event.target.value, event.target.id);
   }
 }
@@ -35,10 +36,10 @@ function addDisplayColumn() {
   deleteButton.innerText = "x";
   deleteButton.id = randomId;
 
-  let input = document.createElement('input')
-  input.type = 'text'
-  input.className = 'color-input'
-  input.id = randomId
+  let input = document.createElement("input");
+  input.type = "text";
+  input.className = "color-input";
+  input.id = randomId;
 
   displayColumn.appendChild(input);
   displayColumn.appendChild(deleteButton);
@@ -58,11 +59,7 @@ function startOver() {
 function fillInColor(colorValue, idNumber) {
   // wip
   console.log(idNumber);
-  let box =document.querySelector(`[id='${idNumber}']`)
+  let box = document.querySelector(`[id='${idNumber}']`);
   console.log(box);
-  box.style.backgroundColor = colorValue
-  
-
-
+  box.style.backgroundColor = colorValue;
 }
-

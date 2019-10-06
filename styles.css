@@ -1,7 +1,7 @@
 /*CSS for the cool kids*/
 html {
   box-sizing: border-box;
-  margin: 0;
+  margin: 10px;
   height: 100%;
   font-weight: normal;
   font-family: "Space Mono", monospace;
@@ -19,61 +19,59 @@ html {
   box-sizing: inherit;
 }
 
-.title {
-  display: flex;  
+.header {
+  display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 38px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  box-shadow: 3px 3px #000;
+  margin: 0;
+  padding: 10px;
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
-
+  justify-content: space-around;
+  width: 800px;
 }
-.add-new-color {
-  color: #0099cc;
-  background: transparent;
-  border: 2px solid #0099cc;
-  border-radius: 30px;
-  padding: 16px 32px;
-  font-size: 16px;
-  margin: 4px 2px;
+
+.button-create {
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 5px;
+  width: 125px;
+  height: 45px;
+  border: 1px solid #000000;
+  font-size: 18px;
+  margin: 0;
   cursor: pointer;
-  background-color: white;
   color: black;
-  border: solid black 2px;
+  background-color: #fff;
+  box-shadow: 3px 3px #000;
 }
 
-.add-new-color:hover {
+.button-create:hover {
   background-color: black;
-  color: white;
-  -webkit-box-shadow: 6px 5px 24px gray;
+  color: #fff;
 }
-.add-new-color:active {
-  background-color: gray;
-}
-
-.container {
-  font-family: "Work Sans", sans-serif;
-  width: 100%;
-  max-width: 2000px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.button-create:active {
+  border-color: #fff;
 }
 
 .pallete {
-  /* basically same as .container */
-  font-family: "Work Sans", sans-serif;
-  width: 100%;
-  max-width: 2000px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 2000px;
+  align-items: center;
 }
 .color-column {
   display: flex;
@@ -81,8 +79,6 @@ html {
   flex-direction: column;
   max-width: inherit;
   min-width: 0.2%;
-  /* width: auto; */
-  /* height: auto; */
   min-height: 600px;
   border: solid black 1px;
 }
@@ -111,14 +107,14 @@ html {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  background-color: white;
+  background-color: #fff;
   color: black;
   border: black;
 }
 
 .delete-button:hover {
   background-color: black;
-  color: white;
+  color: #fff;
   transform: scale(1.1);
   -webkit-transition: transform 0.3s ease-out;
 }
@@ -126,9 +122,4 @@ html {
 button:focus {
   /* magical */
   outline: 0;
-}
-button:active {
-  color: chocolate;
-  /* transform: scale(1.2); */
-  /* -webkit-transition: transform 0.01s ease-out; */
 }
