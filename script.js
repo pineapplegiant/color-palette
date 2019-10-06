@@ -1,5 +1,5 @@
 // Event Listeners
-const colorPalleteContainer = document.getElementsByClassName("pallete");
+const colorPaletteContainer = document.getElementsByClassName("palette");
 const page = document.getElementById("whole-page");
 
 page.addEventListener("click", buttonHandler, false);
@@ -51,7 +51,7 @@ function addDisplayColumn() {
   displayColumn.appendChild(deleteButton);
   displayColumn.appendChild(input);
   displayColumn.appendChild(colorName);
-  colorPalleteContainer[0].appendChild(displayColumn);
+  colorPaletteContainer[0].appendChild(displayColumn);
 }
 
 function deleteColorPicker(idNumber) {
